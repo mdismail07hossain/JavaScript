@@ -16,3 +16,13 @@ function redfuntion() {
   document.getElementById("BgColor").style.background = "white";
   document.getElementById("BgColor").style.color = "black";
 }
+document.write("<br>");
+document.write("<br>");
+
+function devitfuntion(c1, c2) {
+  return c1 - c2;
+}
+let dev = devitfuntion(45, 32);
+document.write(dev);
+document.write("<br>");
+document.write("<br>");

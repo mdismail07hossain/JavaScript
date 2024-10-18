@@ -35,3 +35,11 @@ if (age >= 18) {
 } else {
   console.log(false);
 }
+
+function maxfuntion(b1, b2) {
+  return b1 % b2;
+}
+let max = maxfuntion(45, 23);
+document.write(max);
+document.write("<br>");
+document.write("<br>");
