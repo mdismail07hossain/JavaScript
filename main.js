@@ -26,3 +26,5 @@ let dev = devitfuntion(45, 32);
 document.write(dev);
 document.write("<br>");
 document.write("<br>");
+console.log(dev);
+console.log("my today java work complet");
