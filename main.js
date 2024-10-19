@@ -28,3 +28,11 @@ document.write("<br>");
 document.write("<br>");
 console.log(dev);
 console.log("my today java work complet");
+
+const n1 = 45;
+const n2 = 35;
+if (n1 > n2) {
+  document.write("NUmber num is big " + n1);
+} else {
+  document.write("number num1 is big:" + n2);
+}
