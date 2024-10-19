@@ -36,3 +36,8 @@ if (n1 > n2) {
 } else {
   document.write("number num1 is big:" + n2);
 }
+if (n1 >= n2) {
+  document.write("ok");
+} else {
+  document.write("try again");
+}
