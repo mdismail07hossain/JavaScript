@@ -20,7 +20,7 @@ document.write("<br>");
 document.write("<br>");
 
 function devitfuntion(c1, c2) {
-  return c1 - c2;
+  return c1 * c2;
 }
 let dev = devitfuntion(45, 32);
 document.write(dev);
