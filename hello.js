@@ -62,7 +62,7 @@ if (number1 >= number2 && number1 >= number3) {
 let inputEmail = prompt("Enter Your Valid Email");
 
 // email validaton with ternary operator usign includes method
-/*document.write(
+document.write(
   inputEmail?.includes("@") && inputEmail.includes(".")
     ? "This is valid email"
     : "This is invalid email"
@@ -75,14 +75,14 @@ document.write(
 );
 
 // the output shows as an alert
-const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-regex?.test(inputEmail)
+const regx = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+regx?.test(inputEmail)
   ? alert("This is valid email")
-  : alert("This is invalid email");*/
+  : alert("This is invalid email");
 
 // email validation with loop methode
-const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-while (!regex.test(inputEmail)) {
+const rgex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+while (!rgex.test(inputEmail)) {
   inputEmail = prompt("invalid email, please enter a valid email");
 }
 alert("Your email is valid:", inputEmail);
