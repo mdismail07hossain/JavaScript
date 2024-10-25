@@ -28,3 +28,12 @@ function arrayFunction() {
   window.alert("Sum: " + sum);
 }
 // arrayFunction();
+// Preime nember
+function mypreimeFunction() {
+  const pnumber = prompt("Enter your number:");
+  if (pnumber % !0) {
+    window.alert("This is Preime Number");
+  } else {
+    window.alert("Not Number");
+  }
+}
