@@ -27,4 +27,4 @@ function arrayFunction() {
   window.alert("Zero Count: " + zeroCount);
   window.alert("Sum: " + sum);
 }
-arrayFunction();
+// arrayFunction();
