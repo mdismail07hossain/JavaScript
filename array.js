@@ -37,3 +37,5 @@ function arrayFunction() {
 //     window.alert("Not Number");
 //   }
 // }
+var a = 10;
+if (a == a++) console.log(a);
