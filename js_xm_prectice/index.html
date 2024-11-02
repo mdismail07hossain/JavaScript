@@ -6,24 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JvaScript</title>
 </head>
+<style>
+    .all_btn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 200px;
+        /* display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: 30px; */
+    }
+
+    button {
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        background: linear-gradient(to right, rgb(59, 93, 245), rgb(151, 245, 243));
+    }
+
+    body {
+        background: linear-gradient(to right, rgb(152, 95, 184), rgb(0, 18, 23));
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .emal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 10px;
+
+    }
+</style>
 
 <body>
     <h1>Array = [34, 5, 0, -6, -4, 9, 10, 6, 0, 0, -12, 14];</h1>
-
-    <button onclick="myarray()">Chack_Array</button>
-    <button onclick="myprime()">Chack_Prime</button>
-    <button onclick="myfactorial()">Chack_Factorial</button>
-    <button onclick="myfibonacci()">Chack_Fibonacci</button>
-    <button onclick="mymaximum()">Chack_Maximum</button>
-    <button onclick="myevenodd()">Chack_Even/odd</button>
-    <button onclick="mygrade()">Chack_Grade</button>
     <h1>Array = [4, 5, 8, 68, 79, 1];</h1>
-    <button onclick="mysllgto()">Chack_Small/large/total</button>
+
+    <div class="all_btn">
+        <button onclick="myarray()">Chack_Array</button>
+        <button onclick="myprime()">Chack_Prime</button>
+        <button onclick="myfactorial()">Chack_Factorial</button>
+        <button onclick="myfibonacci()">Chack_Fibonacci</button>
+        <button onclick="mymaximum()">Chack_Maximum</button>
+        <button onclick="myevenodd()">Chack_Even/odd</button>
+        <button onclick="mygrade()">Chack_Grade</button>
+        <button onclick="mysllgto()">Chack_Number</button>
+        <button onclick="checkEmail()">Check Data</button>
+
+    </div>
 
 
 
-    Email: <input type="text" id="txtData" /><span id="msg"></span>
-    <button onclick="checkEmail()">Check Data</button>
+    <div class="emal">Email: <input type="text" id="txtData" /><span id="msg"></span></div>
     <script>
         function checkEmail() {
             let email = document.getElementById("txtData").value;
