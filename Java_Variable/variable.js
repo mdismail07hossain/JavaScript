@@ -11,3 +11,8 @@ let c = 13;
 c = 30;
 c = 45;
 console.log(c);
+
+// Variable declare by const
+
+const d = 43;
+console.log(d);
