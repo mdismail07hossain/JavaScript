@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homeWork</title>
+</head>
+<style>
+    section {
+        margin: 0 auto;
+        width: 400px;
+        color: white;
+    }
+
+    form {
+        padding: 30px 40px;
+        background: linear-gradient(to left, rgb(2, 2, 99), rgb(148, 69, 245));
+        box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+        border-radius: 10px;
+    }
+
+    .inputbox input {
+        width: 100%;
+        padding: 5px;
+
+    }
+
+    .button button {
+        width: 45%;
+    }
+</style>
+
+<body>
+    <Section>
+        <form action="#" name="nform">
+            <div class="inputbox">
+                <label for="name">Name:</label>
+                <input type="text" id="nam" name="nam">
+            </div>
+            <div class="inputbox">
+                <label for="email">Email:</label>
+                <input type="text" id="mail" name="mail" oninput="myemail()">
+                <div style="margin-top: 10px;" id="eemail"></div>
+            </div>
+            <div class="inputbox">
+                <label for="password">Password:</label>
+                <input type="text" id="pass" name="pass" oninput="myepass()">
+                <div style="margin-top: 10px;" id="eepass"></div>
+            </div><br>
+            <div class="gender">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Male">FeMale
+            </div><br>
+            <div class="skill">
+                <label for="skill">Skills:</label>
+                <input type="checkbox" name="skill" value="JS">JS
+                <input type="checkbox" name="skill" value="PHP">PHP
+                <input type="checkbox" name="skill" value="Laravel">Laravel
+                <!-- <input type="checkbox" name="skill" value="Jeson">Jeson -->
+                <input type="checkbox" name="skill" value="React">React
+            </div><br>
+            <div class="course">
+                <label for="course">Course:</label>
+                <select name="course" id="course">
+                    <option value="">Select your course</option>
+                    <option value="Java">Java</option>
+                    <option value=".NET">.NET</option>
+                    <option value="Web">Web</option>
+                    <option value="Design">Design</option>
+                </select>
+            </div><br>
+            <div class="button">
+                <button style="padding: 7px 10px; border-radius: 5px;border: none;background-color: green;color: white;"
+                    type="submit" name="sub" onclick="myform()">Submit</button>
+                <button style="padding: 7px 10px; border-radius: 5px;border: none; background-color: red; color: white;"
+                    type="reset" name="res">Reset</button>
+            </div>
+        </form>
+    </Section>
+
+    <script>
+        function myemail() {
+            const mail = document.getElementById("mail");
+            const eemail = document.getElementById("eemail");
+            const chakemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!chakemail.test(mail.value)) {
+                mail.style.border = "3px solid red";
+                eemail.textContent = "Please enter a valid email..";
+                eemail.style.color = "red";
+                eemail.style.fontWeight = "700";
+                eemail.style.display = "block";
+            } else {
+                mail.style.border = "3px solid green";
+                eemail.style.display = "none";
+            }
+        }
+        function myepass() {
+            const pass = document.getElementById("pass");
+            const eepass = document.getElementById("eepass");
+            const chakpass = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+=[\]{}|;:'",.<>?/]).{8,}$/;
+            if (!chakpass.test(pass.value)) {
+                pass.style.border = "3px solid red";
+                eepass.textContent = "Please enter a strong email password..";
+                eepass.style.color = "red";
+                eepass.style.fontWeight = "700";
+                eepass.style.display = "block";
+            } else {
+                pass.style.border = "3px solid green";
+                eepass.style.display = "none";
+            }
+        }
+        function myform() {
+            let nam = document.nform.nam.value;
+            let mail = document.nform.mail.value;
+            let pass = document.nform.pass.value;
+            let gen = document.nform.gender.value;
+            let course = document.nform.course.value;
+            let skill = " ";
+
+
+            for (i = 0; i < document.nform.skill.length; i++) {
+                if (document.nform.skill[i].checked) {
+                    skill += document.nform.skill[i].value + " ";
+                }
+            }
+
+            me = open("", "", "width=400px,height=600px");
+            with (me.document) {
+                write(`<body style= "
+        color: black; padding:  40px;
+        background: linear-gradient(to left, rgb(2, 2, 99), rgb(148, 69, 245));">`);
+                write(`<div style="background-color:white;padding:20px">`);
+                write(`Name: ${nam} <br> <br> `);
+                write(`Email: ${mail} <br> <br> `);
+                write(`Password: ${pass} <br> <br> `);
+                write(`Gender: ${gen} <br> <br> `);
+                write(`Course: ${course} <br> <br> `);
+                write(`Skills: ${skill} <br> <br> `);
+
+                write(` <button style="padding: 7px 10px; border-radius: 5px;border: none;background-color: red;color: white;" type="button" onclick="self.close()">Close me</button>`);
+                write(` <button style="padding: 7px 10px; border-radius: 5px;border: none;background-color: green;color: white;" type="button" onclick="self.print()">Print me</button>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
